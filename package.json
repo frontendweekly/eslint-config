@@ -1,6 +1,6 @@
 {
-  "name": "@frontendweekly/eslint-config-molle",
-  "version": "2.0.0",
+  "name": "@frontendweekly/molle-eslint-config",
+  "version": "1.0.0",
   "description": "eslint config for frontendweekly project",
   "main": "index.js",
   "files": [
