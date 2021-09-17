@@ -11,10 +11,13 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
+          always-auth: true
           node-version: 14.x
-      - run: npm ci
-        with:
-          token: ${{ secrets.NPM_TOKEN_GITHUB }}
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@frontendweekly"
+      - run: npm install
+        env:
+          NPM_TOKEN_GITHUB: ${{ secrets.NPM_TOKEN_GITHUB }}
       - uses: JS-DevTools/npm-publish@v1
         with:
           registry: https://npm.pkg.github.com/
