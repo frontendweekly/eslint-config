@@ -13,7 +13,9 @@ jobs:
         with:
           node-version: 14.x
       - run: npm ci
+        with:
+          token: ${{ secrets.NPM_TOKEN_GITHUB }}
       - uses: JS-DevTools/npm-publish@v1
         with:
           registry: https://npm.pkg.github.com/
-          token: ${{secrets.NPM_TOKEN_GITHUB}}
+          token: ${{ secrets.NPM_TOKEN_GITHUB }}
