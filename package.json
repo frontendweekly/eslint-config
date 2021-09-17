@@ -12,10 +12,6 @@
   "keywords": [],
   "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/frontendweekly",
-    "access": "public"
-  },
   "dependencies": {
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-chai-friendly": "^0.7.2",
@@ -42,10 +38,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontendweekly/eslint-config-molle.git"
+    "url": "git+https://github.com/frontendweekly/molle-eslint-config.git"
   },
   "bugs": {
-    "url": "https://github.com/frontendweekly/eslint-config-molle/issues"
+    "url": "https://github.com/frontendweekly/molle-eslint-config/issues"
   },
-  "homepage": "https://github.com/frontendweekly/eslint-config-molle#readme"
+  "homepage": "https://github.com/frontendweekly/molle-eslint-config#readme"
 }
