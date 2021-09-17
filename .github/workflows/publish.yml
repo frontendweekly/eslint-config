@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: package
-          path: ${{ GITHUB_REPOSITORY }}/*.tgz
+          path: $GITHUB_REPOSITORY/*.tgz
 
   publish:
     name: "Publish to GitHub Packages"
