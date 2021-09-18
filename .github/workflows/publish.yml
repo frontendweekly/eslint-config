@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  NPM_TOKEN_GITHUB: ${{ secrets.NPM_TOKEN_GITHUB }}
+
 jobs:
   build:
     name: Build npm package for GitHub Packages
@@ -17,8 +20,6 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: "@frontendweekly"
       - run: npm install
-        env:
-          NPM_TOKEN_GITHUB: ${{ secrets.NPM_TOKEN_GITHUB }}
       - run: npm version prerelease --preid=ci-$GITHUB_RUN_ID --no-git-tag-version
       - run: npm pack
       - name: Upload
@@ -44,5 +45,3 @@ jobs:
           scope: "@frontendweekly"
       - run: echo "registry=https://npm.pkg.github.com/@frontendweekly" >> .npmrc
       - run: npm publish $(ls *.tgz)
-        env:
-          NPM_TOKEN_GITHUB: ${{ secrets.NPM_TOKEN_GITHUB }}
